@@ -2,15 +2,16 @@
 
 ## 実現したこと
 
- * Vite x Vue 3 x JSX x TypeScriptの環境
- * JSDoc x JSX x TypeScriptの環境
- * Functional Componentに対するそれっぽいJSDocドキュメンテーション
+ * Vite x Vue 3 x JSX x TypeScript の環境
+ * JSDoc x JSX x TypeScript の環境
+ * Functional Component に対するそれっぽい JSDoc ドキュメンテーション
+ * type annotation を含まない `.vue` に対する JSDoc ドキュメンテーション
 
 Functional Component に対する JSDoc ドキュメンテーションは Vue だけでなく React など他のプロジェクトでも使えるはず
 
 ### 実現していないこと
 
-`.vue` に対して TypeScript を書きつつ JSDoc で parse できるようにすること
+`.vue` に対して TypeScript を書きつつ JSDoc で parse できるようにすること（JavaScript に対してはドキュメントを書ける）
 
 ## 追加した設定
 
@@ -21,6 +22,7 @@ Functional Component に対する JSDoc ドキュメンテーションは Vue �
  * `tsconfig.json` に jsx 関連の項目を Vue で処理するように設定
  * JSDoc でも TypeScript と JSX を処理できるように `jsdoc-babel` plugin と babel の設定を追加
     * `@babel/preset-typescript` + `tsconfig.json` で `.tsx` は処理できるが `.jsx` は処理できないので `@babel/plugin-syntax-jsx` も添える
+    * JSDoc で `.vue` に対する特別な tag を追加する `jsdoc-vue3js` を追加
 
 ## Recommended IDE Setup
 
