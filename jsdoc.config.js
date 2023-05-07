@@ -4,9 +4,10 @@ module.exports = {
   },
   source: {
     include: ['./src/'],
-    includePattern: '.+\\.(js|jsx|ts|tsx)$'
+    includePattern: '.+\\.(js|jsx|ts|tsx|vue)$'
   },
   plugins: [
+    'jsdoc-vue3js',
     'node_modules/jsdoc-babel'
   ],
   babel: {
