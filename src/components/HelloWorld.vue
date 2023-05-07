@@ -1,11 +1,27 @@
-<script setup lang="ts">
-import { ref } from 'vue'
+<script lang="ts">
+import { ref, defineComponent } from 'vue'
 import CounterUpperModifier from './CounterUpperModifier'
 import FunctionalParent from './FunctionalParent'
 
-defineProps<{ msg: string }>()
+/**
+ * @module HelloWorld
+ * @property {string} msg
+ * @vue-data {number} count
+ */
+export default defineComponent({
+  name: 'HelloWorld',
+  props: {
+     msg: String
+  },
 
-const count = ref(0)
+  setup () {
+    const count = ref(0)
+
+    return {
+      count
+    }
+  }
+})
 </script>
 
 <template>
