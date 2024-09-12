@@ -10,6 +10,10 @@ import FunctionalParent from './FunctionalParent'
  */
 export default defineComponent({
   name: 'HelloWorld',
+  components: {
+    CounterUpperModifier,
+    FunctionalParent
+  },
   props: {
      msg: String
   },
